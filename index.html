@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webly Sites - Criação de Sites Profissionais para Seu Negócio</title>
-    <meta name="description" content="Criamos sites profissionais para lanchonetes, lojas, estética automotiva e muito mais. Tenha um site moderno e responsivo para seu negócio.">
+    <meta name="description" content="Criamos sites profissionais para lanchonetes, lojas, estética automotiva, personal trainers e muito mais. Tenha um site moderno e responsivo para seu negócio.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Reset e estilos gerais */
@@ -79,6 +79,17 @@
             background-color: #128C7E;
         }
         
+        .btn-card {
+            background-color: #6c5ce7;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-card:hover {
+            background-color: #5649c0;
+        }
+        
         .text-center {
             text-align: center;
         }
@@ -111,6 +122,60 @@
             color: #666;
             max-width: 700px;
             margin: 0 auto 40px;
+        }
+        
+        /* Badge de parcelamento */
+        .payment-badge {
+            background: linear-gradient(135deg, #6c5ce7, #a463f5);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin: 15px 0;
+            box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3);
+        }
+        
+        .payment-badge i {
+            font-size: 1.1rem;
+        }
+        
+        .payment-info {
+            background-color: #f0f5ff;
+            border-left: 4px solid #6c5ce7;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .payment-info i {
+            font-size: 2rem;
+            color: #6c5ce7;
+        }
+        
+        .payment-info p {
+            margin: 0;
+            font-weight: 500;
+            color: #2d3748;
+        }
+        
+        .payment-info strong {
+            color: #6c5ce7;
+            font-size: 1.1rem;
+        }
+        
+        .card-icons {
+            display: flex;
+            gap: 10px;
+            font-size: 1.8rem;
+            color: #4a5568;
         }
         
         /* Header */
@@ -541,6 +606,18 @@
             font-size: 1.2rem;
         }
         
+        .contact-details p {
+            margin-bottom: 5px;
+        }
+        
+        .payment-methods {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            font-size: 2rem;
+            color: #4a5568;
+        }
+        
         .contact-form {
             background-color: white;
             padding: 30px;
@@ -791,6 +868,11 @@
                 height: 150px;
                 font-size: 50px;
             }
+            
+            .payment-info {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -817,7 +899,15 @@
     <section class="hero" id="home">
         <div class="container hero-content">
             <h1>Criação de Sites Profissionais para o Seu Negócio</h1>
-            <p>Desenvolvemos sites modernos e responsivos para lanchonetes, lojas, estética automotiva e muito mais. Destaque-se online e alcance mais clientes.</p>
+            <p>Desenvolvemos sites modernos e responsivos para lanchonetes, lojas, estética automotiva, personal trainers e muito mais. Destaque-se online e alcance mais clientes.</p>
+            
+            <!-- Badge de parcelamento no hero -->
+            <div style="margin-bottom: 25px;">
+                <span class="payment-badge">
+                    <i class="fas fa-credit-card"></i> Parcelamos em até 12x no cartão
+                </span>
+            </div>
+            
             <div class="hero-buttons">
                 <a href="https://wa.me/5521981478571?text=Olá! Gostaria de solicitar um orçamento para criação de site." class="btn btn-whatsapp" target="_blank">
                     <i class="fab fa-whatsapp"></i> Solicitar Orçamento
@@ -832,6 +922,21 @@
         <div class="container">
             <h2 class="section-title text-center">Nossos Serviços</h2>
             <p class="section-subtitle text-center">Oferecemos soluções web completas para diferentes tipos de negócios. Cada site é desenvolvido sob medida para atender suas necessidades específicas.</p>
+            
+            <!-- Informação de pagamento -->
+            <div class="payment-info">
+                <i class="fas fa-credit-card"></i>
+                <div>
+                    <p><strong>Facilidade de pagamento:</strong> Parcelamos seu site em até 12x no cartão de crédito! 💳</p>
+                    <div class="card-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-elo"></i>
+                        <i class="fab fa-cc-hipercard"></i>
+                    </div>
+                </div>
+            </div>
             
             <div class="services-grid">
                 <div class="service-card">
@@ -884,6 +989,23 @@
                         <a href="https://wa.me/5521981478571?text=Olá! Gostaria de solicitar um orçamento para criação de site para estética automotiva." class="btn" target="_blank">Solicitar Orçamento</a>
                     </div>
                 </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Site para Personal Trainers</h3>
+                        <p>Sites profissionais para personal trainers com apresentação de serviços, planos de treino, blog e agendamento de aulas.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Apresentação de serviços e especialidades</li>
+                            <li><i class="fas fa-check"></i> Planos sobre valores</li>
+                            <li><i class="fas fa-check"></i> Maneira atrativa para atrair + cliente</li>
+                            <li><i class="fas fa-check"></i> Sistema para levar o publico até o seu WhatsApp</li>
+                        </ul>
+                        <a href="https://wa.me/5521981478571?text=Olá! Gostaria de solicitar um orçamento para criação de site para personal trainer." class="btn" target="_blank">Solicitar Orçamento</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -918,6 +1040,13 @@
                     <h3>Entrega</h3>
                     <p>Seu site é entregue pronto para uso e conquistar clientes</p>
                 </div>
+            </div>
+            
+            <!-- Informação de parcelamento no processo -->
+            <div style="text-align: center; margin-top: 40px;">
+                <span class="payment-badge" style="background: linear-gradient(135deg, var(--secondary), var(--primary));">
+                    <i class="fas fa-credit-card"></i> Pagamento facilitado: Parcelamos em até 12x no cartão
+                </span>
             </div>
         </div>
     </section>
@@ -967,6 +1096,19 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Como personal trainer, precisava de um site para mostrar meus serviços e métodos de treino. A Webly Sites criou um site profissional que me ajudou a conquistar novos alunos. Excelente trabalho!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">C</div>
+                        <div class="author-info">
+                            <h4>Carlos Mendes</h4>
+                            <p>Personal Trainer</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -995,6 +1137,16 @@
                     </div>
                     <div class="faq-answer">
                         Sim, todos os sites que desenvolvemos são totalmente responsivos, adaptando-se perfeitamente a dispositivos móveis, tablets e desktops.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Aceitam pagamento parcelado no cartão?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Sim! Aceitamos pagamento parcelado em até 12x no cartão de crédito. Trabalhamos com as principais bandeiras: Visa, Mastercard, American Express, Elo e Hipercard.
                     </div>
                 </div>
                 
@@ -1036,6 +1188,14 @@
         <div class="container cta-content">
             <h2>Pronto para ter um site profissional?</h2>
             <p>Entre em contato agora mesmo pelo WhatsApp e solicite seu orçamento sem compromisso. Vamos juntos impulsionar seu negócio!</p>
+            
+            <!-- Botão com informação de parcelamento -->
+            <div style="margin-bottom: 20px;">
+                <a href="https://wa.me/5521981478571?text=Olá! Gostaria de solicitar um orçamento para criação de site." class="btn btn-card" target="_blank">
+                    <i class="fas fa-credit-card"></i> Parcelamos em até 12x no cartão
+                </a>
+            </div>
+            
             <a href="https://wa.me/5521981478571?text=Olá! Gostaria de solicitar um orçamento para criação de site." class="btn btn-whatsapp" target="_blank">
                 <i class="fab fa-whatsapp"></i> Falar no WhatsApp
             </a>
@@ -1083,11 +1243,18 @@
                     
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-credit-card"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>Localização</h3>
-                            <p>Atendemos clientes em todo o Brasil</p>
+                            <h3>Formas de Pagamento</h3>
+                            <p>Parcelamos em até 12x no cartão de crédito</p>
+                            <div class="payment-methods">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-amex"></i>
+                                <i class="fab fa-cc-elo"></i>
+                                <i class="fab fa-cc-hipercard"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1116,6 +1283,7 @@
                                 <option value="lanchonete">Site para Lanchonete</option>
                                 <option value="loja">Site para Loja</option>
                                 <option value="estetica">Site para Estética Automotiva</option>
+                                <option value="personaltrainer">Site para Personal Trainer</option>
                                 <option value="outro">Outro</option>
                             </select>
                         </div>
@@ -1153,6 +1321,7 @@
                         <li><a href="#services"><i class="fas fa-chevron-right"></i> Site para Lanchonetes</a></li>
                         <li><a href="#services"><i class="fas fa-chevron-right"></i> Site para Lojas</a></li>
                         <li><a href="#services"><i class="fas fa-chevron-right"></i> Site para Estética Automotiva</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Site para Personal Trainers</a></li>
                         <li><a href="#services"><i class="fas fa-chevron-right"></i> Outros Serviços</a></li>
                     </ul>
                 </div>
@@ -1173,13 +1342,13 @@
                     <ul>
                         <li><a href="https://wa.me/5521981478571" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp: (21) 98147-8571</a></li>
                         <li><a href="mailto:contato@weblysites.com"><i class="fas fa-envelope"></i> Email: contato@weblysites.com</a></li>
-                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Atendimento em todo o Brasil</a></li>
+                        <li><a href="#"><i class="fas fa-credit-card"></i> Parcelamos em até 12x</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Webly Sites. Todos os direitos reservados.</p>
+                <p>&copy; 2024 Webly Sites. Todos os direitos reservados. | Aceitamos pagamento parcelado no cartão de crédito</p>
             </div>
         </div>
     </footer>
